@@ -1,6 +1,5 @@
 
-# <code style="color:green">SLYTHERIN</code>
-
+# $\color{green}{\textsf{SLYTHERIN}}$
 **Witamy w domu SLYTHERIN!**
 
 ![Nie udało się wgrać obrazu](/imgs/slytherin.jpg)
