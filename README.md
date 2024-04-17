@@ -1,9 +1,9 @@
 
-# <span style="color:green">SLYTHERIN</span>
+# <code style="color:green">SLYTHERIN</code>
 
 **Witamy w domu SLYTHERIN!**
 
-![Nie udało się wgrać obrazu](imgs\slytherin.jpg)
+![Nie udało się wgrać obrazu](/imgs/slytherin.jpg)
 
 Slytherin jest kojarzony przede wszystkim jako dom uczniów **sprytnych, przebiegłych i żądnych władzy**. Ten dom jest również przeznaczony dla tych, którzy są **ambitni i chcieliby wiele osiągnąć w życiu**. 
 
