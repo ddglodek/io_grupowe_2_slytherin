@@ -17,8 +17,6 @@ def waluta_dict_na_str():
     
     dictionary["knut"] = knuty
     
-    print(dictionary)
-    
     sentence = ""
     
     tableKeys = list(dictionary.keys())
@@ -36,7 +34,7 @@ def waluta_dict_na_str():
         else:
             sentence += ""
 
-    print(sentence)
+    return sentence    
 
 waluta_dict_na_str()
 
