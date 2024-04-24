@@ -1,4 +1,14 @@
-<<<<<<< HEAD
+def wyslij_sowe(adresat, tresc_listu):
+   
+    powodzenie = random.choices([True, False], weights=[85, 15], k=1)[0]
+    if powodzenie:
+        time.sleep(1)  
+        print(f"Wysyłam sowę do {adresat} z treścią: {tresc_listu}")
+    return powodzenie
+wyslij_sowe("Hagrid", "Wpadamy na herbate")
+
+
+
 def licz_sume(fund):
     galeon = fund.get("galeon", [0, 0, 0])
     sykl = fund.get("sykl", [0, 0, 0])
@@ -30,23 +40,5 @@ fundusz = {
 }
 
 print(licz_sume(fundusz))
-=======
 import time
 import random
-
-def wyslij_sowe(adresat, tresc_listu):
-    # adresat = input("Podaj adresata: ")
-    # tresc_listu = input("Wpisz treść listu: ")
-   
-    powodzenie = random.choices([True, False], weights=[85, 15], k=1)[0]
-    if powodzenie:
-        time.sleep(1)  
-        print(f"Wysyłam sowę do {adresat} z treścią: {tresc_listu}")
-    return powodzenie
-wyslij_sowe("Hagrid", "Wpadamy na herbate")
-
-# i = 100
-# while i > 0:
-#     wyslij_sowe("Hagrid", "Wpadamy na herbate")
-#     i -= 1
->>>>>>> 6b5dc3758bd35bd4daafa5ae760dd7d591ade381
