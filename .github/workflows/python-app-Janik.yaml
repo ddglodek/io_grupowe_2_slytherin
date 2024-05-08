@@ -1,0 +1,17 @@
+name: Natalia's Python simple test
+
+on:
+  push:
+    branches: [ Natalia_J_5 ]
+  pull_request:
+    branches: [ Natalia_J_5 ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: NataliaJ test
+        run: python_nataliaJ.py
