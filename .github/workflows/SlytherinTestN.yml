@@ -1,4 +1,4 @@
-ame: Python simple test
+name: Python simple test
 
 on:
   push:
