@@ -21,5 +21,3 @@ def waluta_str_na_dict(input_str):
 
     return currency_dict
 
-print(waluta_str_na_dict("5 knut"))
-print(waluta_str_na_dict("17 galeon 2 sykl 13 knut"))
