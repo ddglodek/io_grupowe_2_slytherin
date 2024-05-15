@@ -1,22 +1,20 @@
-# comment
+name: Python application
 
-name: Python simple test
+on:
+  push:
+    branches: [ "Andrzej_zad2" ]
+  pull_request:
+    branches: [ "Andrzej_zad2" ]
 
-on: 
-    push: 
-        branches: ["Andrzej_zad2"]
-    pull_request:
-        branches: ["Andrzej_zad2"]
-        
 permissions:
-    contents: read
-    
+  contents: read
+
 jobs:
-    build:
-        
+  build:
+
     runs-on: ubuntu-latest
-        
+
     steps:
     - uses: actions/checkout@v4
-    - name: Andrzej test
-      run: python test_wyslij_sowe.py 
+    - name:  test
+      run: python test_wyslij_sowe.py
