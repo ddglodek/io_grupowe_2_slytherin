@@ -1,0 +1,17 @@
+name: Dawid's Python simple test
+
+on:
+  push:
+    branches: [ "dawid_zad3" ]
+  pull_request:
+    branches: [ "dawid_zad3" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Dawid test
+        run: python_dawid.py
