@@ -16,7 +16,7 @@ jobs:
         
     runs-on: ubuntu-lastest
         
-        steps:
-            -uses: actions/checkout@v4
-            -name: Andrzej test
-            run: python test_wyslij_sowe.py 
+    steps:
+        - uses: actions/checkout@v4
+        - name: Andrzej test
+          run: python test_wyslij_sowe.py 
