@@ -4,9 +4,9 @@ name: Python simple test
 
 on: 
     push: 
-        branches ["Andrzej_zad2"]
+        branches: ["Andrzej_zad2"]
     pull_request:
-        branches ["Andrzej_zad2"]
+        branches: ["Andrzej_zad2"]
         
 permissions:
     contents: read
