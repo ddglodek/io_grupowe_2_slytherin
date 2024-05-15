@@ -1,0 +1,19 @@
+ame: Python simple test
+
+on:
+  push:
+    branches: ["Nikola_4"]
+  pull_request:
+    branches: ["Nikola_4"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: run test
+        run: python testzad4.py
