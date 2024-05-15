@@ -1,0 +1,22 @@
+# comment
+
+name: Python simple test
+
+on: 
+    push: 
+        branches ["Andrzej_zad2"]
+    pull_request:
+        branches ["Andrzej_zad2"]
+        
+permissions:
+    contents: read
+    
+jobs:
+    build:
+        
+    runs-on: ubuntu-lastest
+        
+        steps:
+            -uses: actions/checkout@v4
+            -name: Andrzej test
+            run: python tests.py 
