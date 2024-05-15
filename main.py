@@ -103,7 +103,7 @@ def waluta_dict_na_str(dictionary):
                 sentence += str(tableVals[index]) + " " + tableKeys[index] + " "
             elif tableVals[index] <= 0:
                 sentence += ""
-            elif 0 > tableVals[index] > 5:
+            elif 0 < tableVals[index] < 5:
                 sentence += str(tableVals[index]) + " " + tableKeys[index] + "y "
             else:
                 sentence += str(tableVals[index]) + " " + tableKeys[index] + "ów "
@@ -112,10 +112,24 @@ def waluta_dict_na_str(dictionary):
                 sentence += str(tableVals[index]) + " " + tableKeys[index] + " "
             elif tableVals[index] <= 0:
                 sentence += ""
-            elif 0 > tableVals[index] > 5:
+            elif 0 < tableVals[index] < 5:
                 sentence += str(tableVals[index]) + " " + tableKeys[index] + "e "
             else:
                 sentence += str(tableVals[index]) + " " + tableKeys[index] + "i "
                 
+    sentence = sentence[:-1]
+    
+    if sentence=="":
+        sentence = "Brak pieniędzy na koncie."
+        
     print(sentence)
+        
     return sentence    
+
+dictionary = {
+    "galeon": 1,
+    "sykl": 3,
+    "knut": 4
+}
+
+waluta_dict_na_str(dictionary)
