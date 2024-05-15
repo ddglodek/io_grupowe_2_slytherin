@@ -1,5 +1,7 @@
-import time
 import random
+import time
+from typing import Dict, Any
+
 
 def wyslij_sowe(adresat, tresc_listu):
    
@@ -94,5 +96,46 @@ def wybierz_sowe_zwroc_koszt(potwierdzenie_odbioru, odleglosc, typ, specjalna):
 
     return koszt
 
-# Przykładowe użycie funkcji
-print(wybierz_sowe_zwroc_koszt(True, "lokalna", "list", "wyjec"))
+def waluta_dict_na_str(dictionary):
+    
+    sentence = ""
+    
+    tableKeys = list(dictionary.keys())
+    
+    tableVals = []
+    for value in dictionary.values():
+        tableVals.append(int(value))
+    
+    for i in range(len(tableVals)):
+        if tableVals[i] != 0:
+            if i == 0 or i ==2:
+                sentence += str(tableVals[i]) + " " + tableKeys[i] + "y "
+            else:
+                sentence += str(tableVals[i]) + " " + tableKeys[i] + "e "
+        else:
+            sentence += ""
+
+    return sentence    
+  
+def waluta_str_na_dict(input_str):
+    
+    currency_dict = {
+        "galeon": 0,
+        "sykl": 0,
+        "knut": 0
+    }
+
+    tokens = input_str.split()
+
+    for i in range(0, len(tokens), 2):
+        value = int(tokens[i])
+        key = tokens[i + 1]
+
+        if key.startswith('g'):
+            currency_dict["galeon"] = value
+        elif key.startswith('s'):
+            currency_dict["sykl"] = value
+        elif key.startswith('k'):
+            currency_dict["knut"] = value
+
+    return currency_dict
