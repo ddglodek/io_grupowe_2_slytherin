@@ -96,14 +96,26 @@ def waluta_dict_na_str(dictionary):
     tableVals = []
     for value in dictionary.values():
         tableVals.append(int(value))
-    
-    for i in range(len(tableVals)):
-        if tableVals[i] != 0:
-            if i == 0 or i ==2:
-                sentence += str(tableVals[i]) + " " + tableKeys[i] + "y "
+        
+    for index, key in enumerate(tableKeys):
+        if "galeon" in key or "knut" in key:
+            if tableVals[index] == 1:
+                sentence += str(tableVals[index]) + " " + tableKeys[index] + " "
+            elif tableVals[index] <= 0:
+                sentence += ""
+            elif 0 > tableVals[index] > 5:
+                sentence += str(tableVals[index]) + " " + tableKeys[index] + "y "
             else:
-                sentence += str(tableVals[i]) + " " + tableKeys[i] + "e "
-        else:
-            sentence += ""
-
+                sentence += str(tableVals[index]) + " " + tableKeys[index] + "ów "
+        if "sykl" in key:
+            if tableVals[index] == 1:
+                sentence += str(tableVals[index]) + " " + tableKeys[index] + " "
+            elif tableVals[index] <= 0:
+                sentence += ""
+            elif 0 > tableVals[index] > 5:
+                sentence += str(tableVals[index]) + " " + tableKeys[index] + "e "
+            else:
+                sentence += str(tableVals[index]) + " " + tableKeys[index] + "i "
+                
+    print(sentence)
     return sentence    
