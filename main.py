@@ -1,3 +1,7 @@
+import random
+import time
+from typing import Dict, Any
+
 def wyslij_sowe(adresat, tresc_listu):
    
     powodzenie = random.choices([True, False], weights=[85, 15], k=1)[0]
@@ -5,9 +9,6 @@ def wyslij_sowe(adresat, tresc_listu):
         time.sleep(1)  
         print(f"Wysyłam sowę do {adresat} z treścią: {tresc_listu}")
     return powodzenie
-wyslij_sowe("Hagrid", "Wpadamy na herbate")
-
-
 
 def licz_sume(fund):
     galeon = fund.get("galeon", [0, 0, 0])
@@ -32,16 +33,11 @@ def licz_sume(fund):
         "knut": suma
     }
 
-
 fundusz = {
     "galeon" : [1, 3, 5],
     "sykl" : [18, 20, 10],
     "knut" : [30, 40, 7]
 }
-
-print(licz_sume(fundusz))
-import time
-import random
 
 def wybierz_sowe_zwroc_koszt(potwierdzenie_odbioru, odleglosc, typ, specjalna):
     koszt_gal = 0
@@ -91,11 +87,6 @@ def wybierz_sowe_zwroc_koszt(potwierdzenie_odbioru, odleglosc, typ, specjalna):
 
     return koszt
 
-# Przykładowe użycie funkcji
-print(wybierz_sowe_zwroc_koszt(True, "lokalna", "list", "wyjec"))
-from typing import Dict, Any
-
-
 def waluta_dict_na_str(dictionary):
     
     sentence = ""
@@ -116,6 +107,3 @@ def waluta_dict_na_str(dictionary):
             sentence += ""
 
     return sentence    
-
-waluta_dict_na_str()
-
